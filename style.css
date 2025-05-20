@@ -1,0 +1,49 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Open Sans", sans-serif;
+}
+
+.container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: linear-gradient(90deg, #1e1e1e, rgb(14, 14, 32), #1e1e1e);
+}
+
+.relogio{
+    width: 900px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    min-height: 350px;
+    background: #0c0c0c;
+    border-radius: 10px;
+}
+
+.relogio-cont{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 22px;
+    padding: 30px 25px;
+}
+
+.relogio-cont h4{
+    font-weight: 500;
+    color: #b6b6b6;
+    font-size: 18px;
+}
+
+.relogio-cont h1{
+    font-size: 100px;
+    color: #696868;
+    font-weight: 500;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
