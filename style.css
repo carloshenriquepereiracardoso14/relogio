@@ -12,17 +12,50 @@
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    background: linear-gradient(90deg, #1e1e1e, rgb(14, 14, 32), #1e1e1e);
+    background: url(img/back.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit: cover;
+    position: relative;
+    overflow: hidden;
+    padding: 30px;
+}
+
+.passaro{
+    width: 100px;
+    position: absolute;
+    animation: voar 15s linear infinite;
+    top: 100px;
+    animation-delay: var(--delay);
+}
+
+.passaro.delay{
+    animation-delay: 3s;
+    top: 20px;
+}
+
+@keyframes voar {
+    0% {
+        right: -100px;
+    }
+
+    100% {
+        right: 100%;
+    }
 }
 
 .relogio{
-    width: 900px;
+    width: 75%;
     display: flex;
     align-items: center;
     justify-content: space-around;
     min-height: 350px;
-    background: #0c0c0c;
+    backdrop-filter: blur(5px);
+    background: rgba(255, 255, 255, 0.1);
     border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0,0,0, 0.2);
+    flex-wrap: wrap;
 }
 
 .relogio-cont{
@@ -36,14 +69,62 @@
 
 .relogio-cont h4{
     font-weight: 500;
-    color: #b6b6b6;
+    color: #1e1e1e;
     font-size: 18px;
 }
 
 .relogio-cont h1{
     font-size: 100px;
-    color: #696868;
+    color: #2e2e2e;
     font-weight: 500;
+}
+
+.vagalume {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background: #00ffcc;
+    border-radius: 50%;
+    box-shadow: 0 0 10px #00ffcc, 0 0 20px #00ffcc, 0 0 30px #00ffcc;
+    animation: brilho 2s infinite alternate, mover 20s linear infinite;
+}
+
+@keyframes brilho {
+0% {
+    opacity: 0.2;
+    box-shadow: 0 0 5px #00ffcc;
+}
+100% {
+    opacity: 1;
+    box-shadow: 0 0 10px #00ffcc, 0 0 20px #00ffcc, 0 0 40px #00ffcc;
+}
+}
+
+@keyframes mover {
+0% {
+    transform: translate(0, 0);
+}
+100% {
+    transform: translate(100vw, 100vh);
+}
+}
+
+.v1 { top: 10%; left: 20%; animation-delay: 0s, 0s; }
+.v2 { top: 30%; left: 50%; animation-delay: 1s, 3s; }
+.v3 { top: 60%; left: 10%; animation-delay: 2s, 5s; }
+.v4 { top: 80%; left: 70%; animation-delay: 1.5s, 2s; }
+.v5 { top: 40%; left: 80%; animation-delay: 0.5s, 1s; }
+
+@media (max-width:550px){
+    .relogio{
+        flex-direction: column;
+    }
+}
+
+@media (max-width:1100px){
+    .relogio{
+        width: 100%;
+    }
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
