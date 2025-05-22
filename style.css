@@ -23,9 +23,9 @@
 }
 
 .passaro{
-    width: 100px;
+    width: 80px;
     position: absolute;
-    animation: voar 15s linear infinite;
+    animation: voar 25s linear infinite;
     top: 100px;
     animation-delay: var(--delay);
 }
